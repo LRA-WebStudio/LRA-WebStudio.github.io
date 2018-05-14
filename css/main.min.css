@@ -7951,29 +7951,32 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 100;
-  background-color: #1a1a1a; }
-  .preloader .pulse {
-    position: relative;
-    left: 50%;
-    top: 50vh; }
-    .preloader .pulse margin {
-      left: -40px;
-      top: -40px; }
-    .preloader .pulse::before, .preloader .pulse::after {
-      content: '';
-      border: 5px solid #323232;
+  z-index: 200;
+  background-color: #1a1a1a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .preloader .preloader-center {
+    margin: auto; }
+    .preloader .preloader-center .pulse {
+      position: relative;
       width: 80px;
-      height: 80px;
-      -webkit-border-radius: 500px;
-              border-radius: 500px;
-      position: absolute; }
-    .preloader .pulse::before {
-      -webkit-animation: pulse-outer .8s ease-in infinite;
-              animation: pulse-outer .8s ease-in infinite; }
-    .preloader .pulse::after {
-      -webkit-animation: pulse-inner .8s linear infinite;
-              animation: pulse-inner .8s linear infinite; }
+      height: 80px; }
+      .preloader .preloader-center .pulse::before, .preloader .preloader-center .pulse::after {
+        content: '';
+        border: 5px solid #323232;
+        width: 80px;
+        height: 80px;
+        -webkit-border-radius: 500px;
+                border-radius: 500px;
+        position: absolute; }
+      .preloader .preloader-center .pulse::before {
+        -webkit-animation: pulse-outer .8s ease-in infinite;
+                animation: pulse-outer .8s ease-in infinite; }
+      .preloader .preloader-center .pulse::after {
+        -webkit-animation: pulse-inner .8s linear infinite;
+                animation: pulse-inner .8s linear infinite; }
 
 @-webkit-keyframes pulse-outer {
   0% {
@@ -8053,7 +8056,7 @@ section {
       background-color: rgba(255, 199, 101, 0.92); }
   section .h2 {
     font-size: 30px;
-    font-weght: 800;
+    font-weight: 800;
     color: #ffc765; }
     section .h2 span {
       color: #fff; }
@@ -8214,7 +8217,7 @@ html.mm-opened {
   display: flex;
   height: 600px;
   position: relative;
-  top: 0; }
+  top: 0px; }
 
 .flex-center {
   margin: auto; }
@@ -8493,10 +8496,10 @@ html.mm-opened {
     font-size: 32px; }
   .fotorama__arr--next::before {
     content: '\f105'; }
-  .fotorama__arr--prev {
+  .fotorama__arr--next-prev {
     left: 20px; }
-    .fotorama__arr--prev::before {
-      content: '\f104'; }
+  .fotorama__arr--next::before {
+    content: '\f104'; }
 
 input, textarea, select,
 .selectize-control .selectize-input,
@@ -8584,7 +8587,8 @@ select {
   .callback option {
     color: #333; }
   .callback button {
-    margin-top: 40px; }
+    margin: 40px auto 0;
+    margin-left: 39%; }
 
 .reviews {
   text-align: center; }
@@ -8606,10 +8610,11 @@ select {
       transition: background-color .5 ease, transform .5 ease;
       transition: background-color .5 ease, transform .5 ease, -webkit-transform .5 ease; }
       .reviews .owl-dots .owl-dot.active {
-        background-color: #ffc765;
         -webkit-transform: scale(1.3);
             -ms-transform: scale(1.3);
-                transform: scale(1.3); }
+                transform: scale(1.3);
+        background-color: #1a1a1a;
+        opacity: .7; }
 
 .review {
   margin-top: 20px; }
