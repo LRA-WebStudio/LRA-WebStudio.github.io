@@ -8476,7 +8476,10 @@ html.mm-opened {
   opacity: .92; }
 
 .fotorama {
-  background-color: rgba(26, 26, 26, 0.4); }
+  background-color: rgba(26, 26, 26, 0.4);
+  min-width: 0;
+  max-width: 100%;
+  width: 683px; }
   .fotorama__nav-wrap {
     position: absolute;
     bottom: 15px;
@@ -8496,10 +8499,10 @@ html.mm-opened {
     font-size: 32px; }
   .fotorama__arr--next::before {
     content: '\f105'; }
-  .fotorama__arr--next-prev {
+  .fotorama__arr--prev {
     left: 20px; }
-  .fotorama__arr--next::before {
-    content: '\f104'; }
+    .fotorama__arr--prev::before {
+      content: '\f104'; }
 
 input, textarea, select,
 .selectize-control .selectize-input,
@@ -8896,7 +8899,9 @@ p {
     .social-footer .soc li a {
       margin-top: 0; }
   .footer-menu {
-    padding-left: 20px; } }
+    padding-left: 20px; }
+  .fotorama {
+    margin: 0 auto; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -8911,7 +8916,11 @@ p {
     font-size: 13px;
     margin-top: 15px; }
   .header_composition p {
-    font-size: 13px; } }
+    font-size: 13px; }
+  .fotorama__arr.fotorama__arr--prev {
+    display: none; }
+  .fotorama__arr.fotorama__arr--next {
+    display: none; } }
 
 /*User*/
 @media (min-width: 481px) and (max-width: 730px) {
